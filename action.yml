@@ -1,29 +1,29 @@
-name: "Issue Auto Labeling and Assigning"
-description: "trigger an action based on issue content"
+name: 'Issue Auto Labeling and Assigning'
+description: 'trigger an action based on issue content'
 inputs:
   github-token:
-    description: "Github token"
+    description: 'Github token'
     required: true
   parameters:
     description: "JSON array of keywords to look for and labels and assignees to be set when there's a keyword match"
     required: true
   title-or-body:
-    description: "Whether to check the issue title, the issue body, or both for matching keywords"
+    description: 'Whether to check the issue title, the issue body, or both for matching keywords'
     required: false
-    default: "both"
+    default: 'both'
 
 outputs:
   title:
-    description: "Title of Issue"
+    description: 'Title of Issue'
   body:
-    description: "Body of Issue"
+    description: 'Body of Issue'
   labeled:
-    description: "\"true\" if labeled otherwise \"false\""
+    description: '"true" if labeled otherwise "false"'
   assigned:
-    description: "\"true\" if assigned otherwise \"false\""
+    description: '"true" if assigned otherwise "false"'
 runs:
-  using: "node12"
-  main: "lib/index.js"
+  using: 'node16'
+  main: 'lib/index.js'
 branding:
   icon: alert-circle
   color: gray-dark
