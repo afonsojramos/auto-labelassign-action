@@ -1,19 +1,19 @@
 {
-  "name": "issue-action",
-  "version": "2.0.2",
-  "description": "Github action for github issues",
+  "name": "autoassign-action",
+  "version": "1.0.0",
+  "description": "Github action to label and assing GitHub Issues and PRs",
   "keywords": [
     "Actions",
     "GitHub",
     "JavaScript"
   ],
-  "homepage": "https://github.com/Naturalclar/issue-action#readme",
+  "homepage": "https://github.com/afonsojramos/autoassign-action#readme",
   "bugs": {
-    "url": "https://github.com/Naturalclar/issue-action/issues"
+    "url": "https://github.com/afonsojramos/autoassign-action/issues"
   },
-  "repository": "https://github.com/Naturalclar/issue-action.git",
+  "repository": "https://github.com/afonsojramos/autoassign-action.git",
   "license": "MIT",
-  "author": "Jesse Katsumata <jesse.katsumata@gmail.com>",
+  "author": "Afonso Ramos",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",

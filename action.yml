@@ -1,5 +1,5 @@
-name: 'Issue Auto Labeling and Assigning'
-description: 'trigger an action based on issue content'
+name: 'Issue & Pull Request Auto Labeling and Assigning'
+description: 'Apply labels and/or set assignees based on issue/PR contents'
 inputs:
   github-token:
     description: 'Github token'

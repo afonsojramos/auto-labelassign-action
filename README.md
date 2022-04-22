@@ -1,4 +1,4 @@
-[![TestBuild][generaltest]](https://github.com/Naturalclar/issue-action) [![Assign][assigntest]](https://github.com/Naturalclar/issue-action) [![Label][labeltest]](https://github.com/Naturalclar/issue-action)
+[![TestBuild][generaltest]](https://github.com/afonsojramos/autoassign-action) [![Assign][assigntest]](https://github.com/afonsojramos/autoassign-action) [![Label][labeltest]](https://github.com/afonsojramos/autoassign-action)
 
 # Issue Action
 
@@ -18,7 +18,7 @@ Automatically set `help-wanted` label and assign `@username` when Issue contains
 ### Example
 
 ```yaml
-name: "Set Issue Label and Assignee"
+name: 'Set Issue Label and Assignee'
 on:
   issues:
     types: [opened]
@@ -29,11 +29,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v2.0.2
+      - uses: afonsojramos/autoassign-action@v2.0.2
         with:
-          title-or-body: "both"
-          parameters: '[ {"keywords": ["bug", "error"], "labels": ["BUG"], "assignees": ["username"]}, {"keywords": ["help", "guidance"], "labels": ["help-wanted"], "assignees": ["username"]}]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          title-or-body: 'both'
+          parameters: |
+            [
+              { 'keywords': ['bug', 'error'], 'labels': ['BUG'], 'assignees': ['username'] },
+              { 'keywords': ['help', 'guidance'], 'labels': ['help-wanted'], 'assignees': ['username'] },
+            ]
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
 ```
 
 # Upgrading this package
@@ -51,6 +55,6 @@ $ git commit -a -m "release"
 $ git push origin release/vX.X.X
 ```
 
-[generaltest]: https://github.com/Naturalclar/issue-action/workflows/General%20Test/badge.svg
-[assigntest]: https://github.com/Naturalclar/issue-action/workflows/Test%20Issue%20Assign/badge.svg
-[labeltest]: https://github.com/Naturalclar/issue-action/workflows/Test%20Issue%20Label/badge.svg
+[generaltest]: https://github.com/afonsojramos/autoassign-action/workflows/General%20Test/badge.svg
+[assigntest]: https://github.com/afonsojramos/autoassign-action/workflows/Test%20Issue%20Assign/badge.svg
+[labeltest]: https://github.com/afonsojramos/autoassign-action/workflows/Test%20Issue%20Label/badge.svg
