@@ -1,8 +1,7 @@
 import * as core from '@actions/core';
-import { getIssueContent } from './getIssueContent';
+import { getIssueContent } from './issues';
 import { checkKeywords } from './checkKeywords';
-import { setIssueLabel } from './setIssueLabel';
-import { setIssueAssignee } from './setIssueAssignee';
+import { setIssueContents } from './issueContents';
 
 async function run() {
 	try {
@@ -25,14 +24,10 @@ async function run() {
 		const matchingKeywords = checkKeywords(parameters, content);
 
 		if (!matchingKeywords) {
-			console.log('Keywords not included in this issue');
-			return;
+			core.setOutput('Keywords not found in this issue.', true.toString());
 		} else {
-			setIssueLabel(token, matchingKeywords);
-			core.setOutput('labeled', true.toString());
-
-			setIssueAssignee(token, matchingKeywords);
-			core.setOutput('assigned', true.toString());
+			setIssueContents(token, matchingKeywords);
+			core.setOutput('Run complete', true.toString());
 		}
 	} catch (error: any) {
 		core.setFailed(error.message);

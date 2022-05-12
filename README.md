@@ -1,6 +1,6 @@
-[![TestBuild][generaltest]](https://github.com/afonsojramos/autoassign-action) [![Assign][assigntest]](https://github.com/afonsojramos/autoassign-action) [![Label][labeltest]](https://github.com/afonsojramos/autoassign-action)
+[![TestBuild][generaltest]](https://github.com/afonsojramos/auto-labelassign-action) [![Assign][assigntest]](https://github.com/afonsojramos/auto-labelassign-action) [![Label][labeltest]](https://github.com/afonsojramos/auto-labelassign-action)
 
-# Issue Action
+# Auto Label/Assign Action
 
 Github action for automatically adding label or setting assignee when a new Issue or PR is opened.
 
@@ -29,7 +29,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: afonsojramos/autoassign-action@v2.0.2
+      - uses: afonsojramos/auto-labelassign-action@v1.0.0
         with:
           title-or-body: 'both'
           parameters: |
@@ -55,6 +55,6 @@ $ git commit -a -m "release"
 $ git push origin release/vX.X.X
 ```
 
-[generaltest]: https://github.com/afonsojramos/autoassign-action/workflows/General%20Test/badge.svg
-[assigntest]: https://github.com/afonsojramos/autoassign-action/workflows/Test%20Issue%20Assign/badge.svg
-[labeltest]: https://github.com/afonsojramos/autoassign-action/workflows/Test%20Issue%20Label/badge.svg
+[generaltest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/General%20Test/badge.svg
+[assigntest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/Test%20Issue%20Assign/badge.svg
+[labeltest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/Test%20Issue%20Label/badge.svg

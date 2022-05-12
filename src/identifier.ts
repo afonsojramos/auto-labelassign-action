@@ -1,16 +1,11 @@
 import { getOctokit } from '@actions/github';
-import { getRepo, getIssueNumber, getPrNumber } from './github';
+import { getRepo, getIssueNumber } from './github';
 
 export const getIssueContent = async (token: string, titleOrBody: string): Promise<string> => {
 	const octokit = getOctokit(token);
+	const issue_number = getIssueNumber();
 
-	let issue_number;
-
-	if (getIssueNumber() !== undefined) {
-		issue_number = getIssueNumber();
-	} else if (getPrNumber() !== undefined) {
-		issue_number = getPrNumber();
-	} else {
+	if (!issue_number) {
 		throw new Error('No Issue Provided');
 	}
 
