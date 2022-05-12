@@ -40,21 +40,6 @@ jobs:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
 ```
 
-# Upgrading this package
-
-Follow the steps below:
-
-```sh
-# create a new release branch
-$ git checkout -b release/vX.X.X
-```
-
-```
-$ yarn build
-$ git commit -a -m "release"
-$ git push origin release/vX.X.X
-```
-
 [generaltest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/General%20Test/badge.svg
 [assigntest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/Test%20Issue%20Assign/badge.svg
 [labeltest]: https://github.com/afonsojramos/auto-labelassign-action/workflows/Test%20Issue%20Label/badge.svg
