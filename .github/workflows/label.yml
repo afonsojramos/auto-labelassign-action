@@ -5,6 +5,7 @@ on:
 
 jobs:
   test:
+    name: 'Processing Issue'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -23,7 +24,7 @@ jobs:
                 "keywords": ["assign", "test"],
                 "labels": [],
                 "assignees": ["afonsojramos"],
-              },
+              }
             ]
           title-or-body: 'both'
           github-token: '${{ secrets.GITHUB_TOKEN }}'
